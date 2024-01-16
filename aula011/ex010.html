@@ -8,14 +8,14 @@
 <body>
     <h1>Sistema de Fiscalização de Velocidade</h1>
     Velocidade do carro:<input type="number" name="txtvel" id="vel"> km/h
-    <input type="button" value="Verificar" onclick="calcular">
+    <input type="button" value="Verificar" onClick="calcular ()">
     <div id="res">
         
     </div>
     <script>
         function calcular(){
-         var txtv = window.document.getElementById(`vel`)  
-         var res = window.document.getElementById(`res`)
+         var txtv = window.document.getElementById("vel")  
+         var res = window.document.getElementById("res")
          var vel = Number(txtv.value)  
          res.innerHTML = `A sua velocidade atual é de ${vel} km/h `
          if (vel > 60){
