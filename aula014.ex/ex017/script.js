@@ -1,16 +1,21 @@
-function carregar() {
-var msg = window.document.getElementById("msg")
-var img = window.document.getElementById("im") 
-var agora = new Date()
-var hora = agora.getHours()
-msg.innerHTML = `Agora são ${hora} horas.`
-if (hora >=0 && hora < 12) {   
-    img.src = "imagens/manhã.jpg"
-} else if (hora >= 12 && hora < 18 ) { 
-    img.src = "imagens/tarde.jpg"
-    document.body.style.backgroud = "rgb(126, 159, 43)"
-} else{
-    img.src = "imagens/noite.jpg"
-    document.body.style.background = "#515154"              
-}
+function tabuada(){
+    var numero = document.getElementById("num")
+    var tab = document.getElementById("seltab")
+    
+    if (numero.value.length == 0){
+         window.alert("Por favor, digite um número!")
+    } else{
+         let n= Number(numero.value)
+         let c = 1
+         tab.innerHTML = " "
+         while(c <= 10){
+            let item = document.createElement("option")
+            item.text = `${n} x ${c} = ${n*c}`
+            item.value = `tab${c}`
+            tab.appendChild(item)
+            c++
+         }
+    }
+ console.log("a função foi chamada")
+
 }
