@@ -12,8 +12,8 @@ function isNumero(n){
 
 }
 
-function inLista(n, 1){
-    if (1, indexOf(Number(n)) != -1){
+function inLista(numero, lista){
+    if (lista.indexOf(Number(numero)) != -1){
         return true
     } else{
         return false
@@ -55,8 +55,8 @@ function finalizar(){
         }
         media = soma/ total
         res.innerHTML = " "
-        res.innerHTML += `Ao todo, temos ${total} números.`
-        res.innerHTML += `O maior valor informado foi ${maior}.`
+        res.innerHTML += `Ao todo, temos ${total} números.` 
+        res.innerHTML += `O maior valor informado foi ${maior}.` 
         res.innerHTML += `O menor valor informado foi ${menor}.`
         res.innerHTML += `A soma de todos os valores é ${soma}.`
         res.innerHTML += `A média dos valores é ${media}.`
